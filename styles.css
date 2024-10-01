@@ -1,0 +1,51 @@
+/* Created by Tivotal */
+
+* {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.div {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  background: #222;
+  border-radius: 5px;
+  overflow: hidden;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.handler {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #fff;
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+  transform: rotate(45deg);
+  cursor: nw-resize;
+}
+
+.handler::before,
+.handler::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border: 1px solid #fff;
+  right: -6px;
+}
+
+.handler::after {
+  right: -12px;
+}
